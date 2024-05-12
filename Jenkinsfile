@@ -3,11 +3,11 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID="741401799044"
         AWS_DEFAULT_REGION="us-east-1" 
-	CLUSTER_NAME="nodejs-cluster"
-	SERVICE_NAME="nodejs-cont-service"
-	TASK_DEFINITION_NAME="nodejs-task"
+	CLUSTER_NAME="nodeclust"
+	SERVICE_NAME="mylove-svc"
+	TASK_DEFINITION_NAME="samilove"
 	DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="repo"
+        IMAGE_REPO_NAME="nodejs"
         IMAGE_TAG="${env.BUILD_ID}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 	registryCredential = "aws-admin-user"  //Assign the name of the credentials(ID) you created in Jenkins to store the AWS Access Key and Secret Key
